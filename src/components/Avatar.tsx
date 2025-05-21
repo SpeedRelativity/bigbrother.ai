@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { useFrame } from "@react-three/fiber";
 
-export default function AgentAvatar() {
+export default function Avatar() {
   const meshRef = useRef<any>(null);
 
   useFrame(({clock}) => {
@@ -19,6 +19,7 @@ export default function AgentAvatar() {
 
   return (
     <mesh ref={meshRef}>
+      
       <boxGeometry args={[1, 1, 1]} />
       <meshStandardMaterial color="orange" />
     </mesh>
