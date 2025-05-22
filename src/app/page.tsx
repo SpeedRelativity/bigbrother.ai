@@ -1,20 +1,23 @@
 "use client";
-import {Button} from '@/components/ui/button';
+import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Visualizer from "@/components/Visualizer";
 import Chat from "@/components/Chat";
+
 export default function Home() {
   return (
-    <div className="background-container flex items-center bg-blue-200 w-screen min-h-screen justify-center mx-auto gap-4">
-      <main className='w-full flex justify-center'>
-        <div className="inner-container flex flex-col items-center bg-red-500 h-[80vh] w-[60vw] mx-auto justify-between overflow-hidden justify-center px-4">
-          <div className="bg-white w-full h-full ">
-            <Visualizer/>
-            
-          </div>  
-          <div className="bg-green-400 w-full">
-            <Chat/>
+    <div className="flex items-center bg-blue-200 w-screen min-h-screen justify-center mx-auto gap-4">
+      <main className="w-full flex">
+        <div className="flex flex-col items-center bg-black h-[90vh] w-[80vw] mx-auto justify-between overflow-hidden p-4">
+
+          <div className="h-1/2 w-full bg-white">
+            <Visualizer />
           </div>
+
+          <div className="bg-green-400 w-full h-1/2">
+            <Chat />
+          </div>
+
         </div>
       </main>
     </div>

@@ -65,7 +65,7 @@ export default function Chat(){
     return(
         
         <div className="flex flex-col gap-4 p-4 w-full">
-            <div className="bg-gray-300 p-4 rounded min-h-[100px] whitespace-pre-wrap text-black"> {response || '...'}</div>
+            <div className="bg-gray-300 p-4 rounded whitespace-pre-wrap text-black"> {response || '...'}</div>
             <textarea className="bg-purple-400 border p-2 rounded" value={input} onChange={(e) => setInput(e.target.value)} placeholder="What's up?"></textarea>
             <button onClick={handleSend} className="bg-black px-4 rounded text-white" disabled={loading}> {loading ? "Thinking...": "Send"} </button>
         </div>
