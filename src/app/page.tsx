@@ -1,7 +1,7 @@
 "use client";
 import {Button} from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import AvatarVisuals from "@/components/AgentVisuals";
+import Visualizer from "@/components/Visualizer";
 import Chat from "@/components/Chat";
 export default function Home() {
   return (
@@ -9,7 +9,7 @@ export default function Home() {
       <main className='w-full flex justify-center'>
         <div className="inner-container flex flex-col items-center bg-red-500 h-[80vh] w-[60vw] mx-auto justify-between overflow-hidden justify-center px-4">
           <div className="bg-white w-full h-full ">
-            <AvatarVisuals/>
+            <Visualizer/>
             
           </div>  
           <div className="bg-green-400 w-full">
