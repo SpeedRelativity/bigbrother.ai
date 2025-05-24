@@ -1,14 +1,19 @@
 "use client";
 import { useEffect, useRef } from "react";
+import { useChatStore } from './chatStore';
 
 export default function Visualizer() {
+  const { audioURL } = useChatStore()
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const audioRef = useRef<HTMLAudioElement>(null);
 
   useEffect(() => {
+    
     const canvas = canvasRef.current;
     const audio = audioRef.current;
     if (!canvas || !audio) return;
+    audio.src = audioURL
+    audio.play();
 
     const ctx = canvas.getContext("2d");
     if (!ctx) return;
@@ -76,17 +81,12 @@ export default function Visualizer() {
     return () => {
       audio.removeEventListener("play", handlePlay);
     };
-  }, []);
+  }, [audioURL]);
 
   return (
-    <div className="flex flex-col items-center w-full h-full justify-center align-content">
-      <canvas
-        ref={canvasRef}
-        width={500}
-        height={300}
-        className="bg-white"
-      />
-      <audio ref={audioRef} src="/audio/sample.mp3" controls />
+    <div className="…">
+      <canvas ref={canvasRef} width={500} height={300} />
+      <audio ref={audioRef} controls />
     </div>
-  );
+  )
 }

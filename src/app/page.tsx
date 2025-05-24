@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Visualizer from "@/components/Visualizer";
 import Chat from "@/components/Chat";
+import Speech from '@/components/speech';
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
 
           <div className="h-1/2 w-full bg-white">
             <Visualizer />
+            <Speech />
           </div>
 
           <div className="bg-green-400 w-full h-1/2">
