@@ -1,36 +1,73 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Youtube Link: https://youtu.be/rKHyaduNo_k   
 
-## Getting Started
+# Interactive Voice-Cloned AI Chat Interface
+An interactive chatbot application leveraging advanced generative AI and personalized voice technology to create a unique conversational experience. Users can communicate with an AI-powered assistant that responds dynamically in a realistic, cloned voice, accompanied by engaging real-time audio waveform visualizations.
 
-First, run the development server:
+## Project Overview
+
+This project integrates state-of-the-art technologies:
+
+* **Conversational AI:** Utilizes Grok's LLaMA-based large language model for intelligent and contextually aware responses.
+* **Voice Cloning & Text-to-Speech:** Implements ElevenLabs’ advanced TTS API to generate natural, human-like speech cloned from personalized voice samples.
+* **Interactive UI & Visualization:** Features a dynamic React frontend with live waveform visualizations, enhancing interactivity and immersion.
+
+## Key Features
+
+* **AI Chat Responses:** Real-time conversational responses powered by Grok's generative AI.
+* **Personalized Voice Output:** Realistic speech synthesis using ElevenLabs’ voice cloning capability.
+* **Real-time Audio Visualization:** Visually engaging waveform animations synchronized to AI-generated speech.
+* **Responsive Frontend:** Built using Next.js, React, and styled with Tailwind CSS for optimal user experience.
+* **Asynchronous Processing:** Efficient backend implementation to handle real-time data streaming.
+
+## Technologies Used
+
+* **Frontend:** React, Next.js, Tailwind CSS
+* **Backend:** Node.js, Next.js API Routes
+* **AI & APIs:** Grok LLaMA, ElevenLabs Text-to-Speech API
+* **Visualization:** Web Audio API, HTML5 Canvas
+* **State Management:** Zustand
+* **Development & Collaboration:** Git, GitHub, VS Code
+
+## Setup & Installation
+
+
+Clone the repository and install dependencies:
+
+```bash
+git clone [YOUR_REPO_URL]
+cd [PROJECT_DIRECTORY]
+npm install
+```
+MAKE SURE TO CREATE A .ENV FILE AND ENTER YOUR API KEYS  
+ALSO REPLACE THE __API_KEY__ spots with your api keys in route.ts and other related files.  
+REPLACE THE AUDIO FILE PATH WITH YOUR AUDIO CLIP.
+GENERATE A VOICE ID FROM ELEVENLABS AUDIO BY RUNNING:
+```bash
+npx tsx example.ts
+```
+Use that voiceId inside the speech.tsx model.
+
+
+Start the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Demo & Usage
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. Enter your prompt in the provided chat input.
+2. Click "Send" to interact with the AI chatbot.
+3. Listen and watch as the chatbot responds with audio in a cloned voice, visualized through the real-time waveform.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Showcase
 
-## Learn More
+Include screenshots or GIFs demonstrating the application's features here.
 
-To learn more about Next.js, take a look at the following resources:
+## License
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+This project is licensed under the MIT License.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Feel free to contact me for further information or collaboration opportunities.
